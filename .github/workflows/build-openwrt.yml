@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build OpenWrt
+name: Lienol_PBRM1_32M
 
 on:
   release:
@@ -15,16 +15,16 @@ on:
     branches:
       - master
     paths:
-      - '.config'
+      - 'Lienol_PBR_M1.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
 #    types: [started]
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
-  CONFIG_FILE: .config
+  REPO_URL: https://github.com/cutepan/openwrt
+  REPO_BRANCH: dev-19.07
+  CONFIG_FILE: Lienol_PBR_M1.config
   DIY_SH: diy.sh
   FREE_UP_DISK: false
   SSH_ACTIONS: false
