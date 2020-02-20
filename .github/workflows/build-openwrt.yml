@@ -11,11 +11,11 @@ name: Lienol_PBRM1_32M
 on:
   release:
     types: [published]
-  push:
-    branches:
-      - master
-    paths:
-      - 'Lienol_PBR_M1.config'
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - 'Lienol_PBR_M1.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
