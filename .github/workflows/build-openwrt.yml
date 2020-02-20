@@ -9,8 +9,8 @@
 name: Lienol_PBRM1_32M
 
 on:
-  release:
-    types: [published]
+#  release:
+#    types: [published]
 #  push:
 #    branches:
 #      - master
@@ -18,8 +18,8 @@ on:
 #      - 'Lienol_PBR_M1.config'
 #  schedule:
 #    - cron: 0 8 * * 5
-#  watch:
-#    types: [started]
+  watch:
+    types: [started]
 
 env:
   REPO_URL: https://github.com/cutepan/openwrt
@@ -35,6 +35,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
     - name: Checkout
